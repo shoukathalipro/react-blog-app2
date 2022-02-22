@@ -68,11 +68,14 @@
 /* Featured Articles Component */
 
 .featured_Articles_Component {
+  box-sizing: border-box;
+  width: 78%;
   display: flex;
-  flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   gap: 0.8vw;
+  margin-left: 50%;
+  transform: translateX(-50%);
 }
 
 .featured_Articles_Right {
@@ -80,10 +83,12 @@
   flex-direction: column;
   align-items: center;
   gap: 0.7vw;
+  box-sizing: border-box;
+  width: 50%;
 }
 
 .featured_Articles_Box_Big {
-  height: 20vw;
+  height: 35.5vh;
   width: 40vw;
   display: flex;
   flex-direction: column;
@@ -96,8 +101,8 @@
 }
 
 .featured_Articles_Box_Small {
-  height: 16.9vh;
-  width: 20vw;
+  height: 17.1vh;
+  width: 36.2vw;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -111,7 +116,7 @@
 .Box_Big_Title {
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
-  font-size: 40px;
+  font-size: 30px;
   text-decoration: none;
   color: white;
 }
@@ -125,7 +130,7 @@
 .Box_Small_Title {
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
-  font-size: 32px;
+  font-size: 25px;
   text-decoration: none;
   color: white;
 }
@@ -188,9 +193,10 @@
 .AllSections_Title {
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
-  font-size: 32px;
+  font-size: 25px;
   text-decoration: none;
   color: #404040;
+  text-align: left;
 }
 
 .AllSections_BlogContent {
@@ -251,7 +257,7 @@
 .category1_Title {
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
-  font-size: 26px;
+  font-size: 25px;
   text-decoration: none;
   color: black;
 }
