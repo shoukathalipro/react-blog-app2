@@ -1,30 +1,13 @@
-import axios from "axios";
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { NavLink } from "react-router-dom";
 import styles from '../AppStyles.module.css';
 
 
-const LatestArticlesAllSections = () => {
+const LatestArticlesAllSections = (props) => {
 
-    const [technology, setTechnology] = useState([]);
-    const [fitness, setFitness] = useState([]);
-    const [food, setFood] = useState([]);
-
-    const getBlogs = () => {
-        axios.get("https://evening-garden-77742.herokuapp.com/api/v1/LatestArticlesAllSections")
-        .then((response) => {
-            // console.log(response.data);
-            setTechnology(response.data.filter( (article) => article.CategoryName === "Technology"));
-            setFitness(response.data.filter( (article) => article.CategoryName === "Fitness"));
-            setFood(response.data.filter( (article) => article.CategoryName === "Food"));
-        }
-        );
-    }
-
-
-    useEffect( () => {
-        getBlogs()
-    },[]);
+    const technology = props.technology;
+    const fitness = props.fitness;
+    const food = props.food;
 
     return(
         <div className={styles.AllSections_Main}>

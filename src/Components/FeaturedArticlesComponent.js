@@ -1,30 +1,13 @@
-import axios from "axios";
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { NavLink } from "react-router-dom";
 import styles from '../AppStyles.module.css';
 
 
-const FeaturedArticlesComponent = () => {
+const FeaturedArticlesComponent = (props) => {
 
-    const [bollywood, setBollywood] = useState([]);
-    const [hollywood, setHollywood] = useState([]);
-    const [technology, setTechnology] = useState([]);
-
-    const getBlogs = () => {
-        axios.get("https://evening-garden-77742.herokuapp.com/api/v1/FeaturedArticles")
-        .then((response) => {
-            // console.log(response.data);
-            setBollywood(response.data.filter( (article) => article.CategoryName === "Bollywood"));
-            setHollywood(response.data.filter( (article) => article.CategoryName === "Hollywood"));
-            setTechnology(response.data.filter( (article) => article.CategoryName === "Technology"));
-        }
-        );
-    }
-
-
-    useEffect( () => {
-        getBlogs()
-    },[]);
+    const bollywood = props.bollywood;
+    const hollywood = props.hollywood;
+    const technology = props.technology;
 
 
     return(

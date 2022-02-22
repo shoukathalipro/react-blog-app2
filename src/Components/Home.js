@@ -1,4 +1,5 @@
-import React from "react";
+import axios from "axios";
+import React, { useEffect, useState } from "react";
 import styles from '../AppStyles.module.css';
 import FeaturedArticlesComponent from "./FeaturedArticlesComponent";
 import LatestArticlesAllSections from "./LatestArticlesAllSections";
@@ -8,14 +9,41 @@ import LatestStories from "./LatestStories";
 
 const Home = () => {
 
+    const [bollywood, setBollywood] = useState([]);
+    const [hollywood, setHollywood] = useState([]);
+    const [technology, setTechnology] = useState([]);
+    const [fitness, setFitness] = useState([]);
+    const [food, setFood] = useState([]);
+
+    const getBlogs = () => {
+        axios.get("https://evening-garden-77742.herokuapp.com/api/v1/home")
+        .then((response) => {
+            // console.log(response.data);
+            setBollywood(response.data.filter( (article) => article.CategoryName === "Bollywood"));
+            setHollywood(response.data.filter( (article) => article.CategoryName === "Hollywood"));
+            setTechnology(response.data.filter( (article) => article.CategoryName === "Technology"));
+            setFitness(response.data.filter( (article) => article.CategoryName === "Fitness"));
+            setFood(response.data.filter( (article) => article.CategoryName === "Food"));
+        }
+        );
+    }
+
+
+    useEffect( () => {
+        getBlogs()
+    },[]);
+
     return(
         <div className={styles.commonStyle}>
-            <FeaturedArticlesComponent/>
-            <LatestArticlesAllSections/>
-            <LatestArticlesCategory1/>
-            <LatestStories/>
+            <FeaturedArticlesComponent bollywood={bollywood} hollywood={hollywood} technology={technology}/>
+            <LatestArticlesAllSections technology={technology} fitness={fitness} food={food}/>
+            <LatestArticlesCategory1 bollywood={bollywood} hollywood={hollywood}/>
+            <LatestStories bollywood={bollywood} hollywood={hollywood} technology={technology} fitness={fitness} food={food}/>
         </div>
     )
 }
 
 export default Home;
+
+// "https://evening-garden-77742.herokuapp.com/api/v1/home"
+// "http://localhost:3001/api/v1/home"

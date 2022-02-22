@@ -1,38 +1,20 @@
-import axios from "axios";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import styles from '../AppStyles.module.css';
 
 
-const LatestStories = () => {
+const LatestStories = (props) => {
     const [loadMore, setLoadMore] = useState(false);
     const [loadMoreBtn, setLoadMoreBtn] = useState('Load More');
     const [arrow, setArrow] = useState(<i className="fas fa-arrow-down" style={ {color : 'orange'} }></i>);
 
 
-    const [bollywood, setBollywood] = useState([]);
-    const [hollywood, setHollywood] = useState([]);
-    const [technology, setTechnology] = useState([]);
-    const [fitness, setFitness] = useState([]);
-    const [food, setFood] = useState([]);
+    const bollywood = props.bollywood;
+    const hollywood = props.hollywood;
+    const technology = props.technology;
+    const fitness = props.fitness;
+    const food = props.food;
 
-    const getBlogs = () => {
-        axios.get("https://evening-garden-77742.herokuapp.com/api/v1/LatestStories")
-        .then((response) => {
-            // console.log(response.data);
-            setBollywood(response.data.filter( (article) => article.CategoryName === "Bollywood"));
-            setHollywood(response.data.filter( (article) => article.CategoryName === "Hollywood"));
-            setTechnology(response.data.filter( (article) => article.CategoryName === "Technology"));
-            setFitness(response.data.filter( (article) => article.CategoryName === "Fitness"));
-            setFood(response.data.filter( (article) => article.CategoryName === "Food"));
-        }
-        );
-    }
-
-
-    useEffect( () => {
-        getBlogs()
-    },[]);
 
     const handleClick = () => {
         setLoadMore(!loadMore);
