@@ -14,6 +14,7 @@ const Home = () => {
     const [technology, setTechnology] = useState([]);
     const [fitness, setFitness] = useState([]);
     const [food, setFood] = useState([]);
+    const [loading, setLoading] = useState(false);
 
     const getBlogs = () => {
         axios.get("https://evening-garden-77742.herokuapp.com/api/v1/home")
@@ -24,6 +25,7 @@ const Home = () => {
             setTechnology(response.data.filter( (article) => article.categoryName === "Technology"));
             setFitness(response.data.filter( (article) => article.categoryName === "Fitness"));
             setFood(response.data.filter( (article) => article.categoryName === "Food"));
+            setLoading(true);
         }
         );
     }
@@ -35,10 +37,16 @@ const Home = () => {
 
     return(
         <div className={styles.commonStyle}>
-            <FeaturedArticlesComponent bollywood={bollywood} hollywood={hollywood} technology={technology}/>
-            <LatestArticlesAllSections technology={technology} fitness={fitness} food={food}/>
-            <LatestArticlesCategory1 bollywood={bollywood} hollywood={hollywood}/>
-            <LatestStories bollywood={bollywood} hollywood={hollywood} technology={technology} fitness={fitness} food={food}/>
+            {loading ? 
+            <>
+                <FeaturedArticlesComponent bollywood={bollywood} hollywood={hollywood} technology={technology}/>
+                <LatestArticlesAllSections technology={technology} fitness={fitness} food={food}/>
+                <LatestArticlesCategory1 bollywood={bollywood} hollywood={hollywood}/>
+                <LatestStories bollywood={bollywood} hollywood={hollywood} technology={technology} fitness={fitness} food={food}/>
+            </>
+            :
+            "Loading..."
+            }
         </div>
     )
 }
