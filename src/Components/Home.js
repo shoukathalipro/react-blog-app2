@@ -5,6 +5,7 @@ import FeaturedArticlesComponent from "./FeaturedArticlesComponent";
 import LatestArticlesAllSections from "./LatestArticlesAllSections";
 import LatestArticlesCategory1 from "./LatestArticlesCategory1";
 import LatestStories from "./LatestStories";
+import LoadingSpinner from "./LoadingSpinner";
 
 
 const Home = () => {
@@ -45,7 +46,7 @@ const Home = () => {
                 <LatestStories bollywood={bollywood} hollywood={hollywood} technology={technology} fitness={fitness} food={food}/>
             </>
             :
-            "Loading..."
+            <LoadingSpinner/>
             }
         </div>
     )
