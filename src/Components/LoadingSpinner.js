@@ -1,10 +1,12 @@
 import React from "react";
-import ClipLoader from "react-spinners/ClipLoader";
+import styles from '../AppStyles.module.css';
+import ClimbingBoxLoader from "react-spinners/ClimbingBoxLoader";
+
 
 const LoadingSpinner = () => {
     return (
-        <div>
-            <ClipLoader color={"#F37A24"} size={150} />
+        <div className={styles.loading_Spinner}>
+            <ClimbingBoxLoader color={"#F37A24"} size={150} />
         </div>
     )
 }

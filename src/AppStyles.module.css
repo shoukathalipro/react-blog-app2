@@ -5,6 +5,18 @@
   margin-top: 2vw;
 }
 
+/*///////////////////////////*/
+/* LoadingSpinner Component */
+
+.loading_Spinner {
+  background-color: #282c34;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+}
+
 /*///////////////////*/
 /* Header Component */
 
