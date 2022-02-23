@@ -19,11 +19,11 @@ const Home = () => {
         axios.get("https://evening-garden-77742.herokuapp.com/api/v1/home")
         .then((response) => {
             // console.log(response.data);
-            setBollywood(response.data.filter( (article) => article.CategoryName === "Bollywood"));
-            setHollywood(response.data.filter( (article) => article.CategoryName === "Hollywood"));
-            setTechnology(response.data.filter( (article) => article.CategoryName === "Technology"));
-            setFitness(response.data.filter( (article) => article.CategoryName === "Fitness"));
-            setFood(response.data.filter( (article) => article.CategoryName === "Food"));
+            setBollywood(response.data.filter( (article) => article.categoryName === "Bollywood"));
+            setHollywood(response.data.filter( (article) => article.categoryName === "Hollywood"));
+            setTechnology(response.data.filter( (article) => article.categoryName === "Technology"));
+            setFitness(response.data.filter( (article) => article.categoryName === "Fitness"));
+            setFood(response.data.filter( (article) => article.categoryName === "Food"));
         }
         );
     }

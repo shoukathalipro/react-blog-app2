@@ -41,13 +41,13 @@ const LatestArticlesCategory1 = (props) => {
                                 if(!loadMore && index>=bollywood.length-3){
                                     return(
                                         <div key={index} className={ styles.category1_Card }>
-                                            <div><img className={ styles.category1_Image } src={ article.ImageAsset } alt="From the Article"/></div>
+                                            <div><img className={ styles.category1_Image } src={ article.imageAsset } alt="From the Article"/></div>
                                             <div>
-                                                <NavLink to={`/article/${article.Title}/${article.CategoryName}`} className={ styles.category1_Title }>{ article.Title }</NavLink>
-                                                <div className={ styles.category1_BlogContent }>{ article.BlogContent }</div>
+                                                <NavLink to={`/article/${article.title}/${article.categoryName}`} className={ styles.category1_Title }>{ article.title }</NavLink>
+                                                <div className={ styles.category1_BlogContent }>{ article.blogContent }</div>
                                                 <div>
-                                                    <span className={ styles.category1_CategoryName }>{ article.CategoryName }</span>
-                                                    <span className={ styles.category1_PublishedDate }> / { article.PublishedDate }</span>
+                                                    <span className={ styles.category1_CategoryName }>{ article.categoryName }</span>
+                                                    <span className={ styles.category1_PublishedDate }> / { article.publishedDate }</span>
                                                 </div>
                                             </div>
                                         </div>
@@ -56,13 +56,13 @@ const LatestArticlesCategory1 = (props) => {
                                 else if (loadMore && index>=bollywood.length-5) {
                                     return(
                                         <div key={index} className={ styles.category1_Card }>
-                                            <div><img className={ styles.category1_Image } src={ article.ImageAsset } alt="From the Article"/></div>
+                                            <div><img className={ styles.category1_Image } src={ article.imageAsset } alt="From the Article"/></div>
                                             <div>
-                                                <NavLink to={`/article/${article.Title}/${article.CategoryName}`} className={ styles.category1_Title }>{ article.Title }</NavLink>
-                                                <div className={ styles.category1_BlogContent }>{ article.BlogContent }</div>
+                                                <NavLink to={`/article/${article.title}/${article.categoryName}`} className={ styles.category1_Title }>{ article.title }</NavLink>
+                                                <div className={ styles.category1_BlogContent }>{ article.blogContent }</div>
                                                 <div>
-                                                    <span className={ styles.category1_CategoryName }>{ article.CategoryName }</span>
-                                                    <span className={ styles.category1_PublishedDate }> / { article.PublishedDate }</span>
+                                                    <span className={ styles.category1_CategoryName }>{ article.categoryName }</span>
+                                                    <span className={ styles.category1_PublishedDate }> / { article.publishedDate }</span>
                                                 </div>
                                             </div>
                                         </div>
@@ -77,13 +77,13 @@ const LatestArticlesCategory1 = (props) => {
                             hollywood.map(  (article, index) => {
                                 if(index>=hollywood.length-1) {
                                     return(
-                                        <div className={ styles.category2_Card } key={index}  style={   {backgroundImage: `url(${article.ImageAsset})`,
+                                        <div className={ styles.category2_Card } key={index}  style={   {backgroundImage: `url(${article.imageAsset})`,
                                                                                                          backgroundPosition: 'center',
                                                                                                          backgroundSize: 'cover',
                                                                                                          backgroundRepeat: 'no-repeat' }  }>
                                             <div className={ styles.category2_Child}>
-                                                <NavLink to={`/article/${article.Title}/${article.CategoryName}`} className={ styles.category2_Title}>{ article.Title }</NavLink>
-                                                <div className={ styles.category2_NameAndDate}>{ article.CategoryName } / { article.PublishedDate }</div>
+                                                <NavLink to={`/article/${article.title}/${article.categoryName}`} className={ styles.category2_Title}>{ article.title }</NavLink>
+                                                <div className={ styles.category2_NameAndDate}>{ article.categoryName } / { article.publishedDate }</div>
                                             </div>
                                         </div>
                                     )

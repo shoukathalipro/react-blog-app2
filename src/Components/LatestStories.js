@@ -42,11 +42,11 @@ const LatestStories = (props) => {
                             if(index>=technology.length-1) {
                                 return(
                                     <div className={ styles.LatestStories_Card } key={index}>
-                                        <NavLink to={`/article/${article.Title}/${article.CategoryName}`} className={ styles.AllSections_Title }>{article.Title}</NavLink>
-                                        <div className={ styles.AllSections_BlogContent }>{article.BlogContent}</div>
+                                        <NavLink to={`/article/${article.title}/${article.categoryName}`} className={ styles.AllSections_Title }>{article.title}</NavLink>
+                                        <div className={ styles.AllSections_BlogContent }>{article.blogContent}</div>
                                         <div>
-                                            <span className={ styles.AllSections_CategoryName }>{article.CategoryName}</span>
-                                            <span className={ styles.AllSections_PublishedDate }> / {article.PublishedDate}</span>
+                                            <span className={ styles.AllSections_CategoryName }>{article.categoryName}</span>
+                                            <span className={ styles.AllSections_PublishedDate }> / {article.publishedDate}</span>
                                         </div>
                                     </div>
                                 )
@@ -58,11 +58,11 @@ const LatestStories = (props) => {
                             if(index>=fitness.length-1) {
                                 return(
                                     <div className={ styles.LatestStories_Card } key={index}>
-                                        <NavLink to={`/article/${article.Title}/${article.CategoryName}`} className={ styles.AllSections_Title }>{article.Title}</NavLink>
-                                        <div className={ styles.AllSections_BlogContent }>{article.BlogContent}</div>
+                                        <NavLink to={`/article/${article.title}/${article.categoryName}`} className={ styles.AllSections_Title }>{article.title}</NavLink>
+                                        <div className={ styles.AllSections_BlogContent }>{article.blogContent}</div>
                                         <div>
-                                            <span className={ styles.AllSections_CategoryName }>{article.CategoryName}</span>
-                                            <span className={ styles.AllSections_PublishedDate }> / {article.PublishedDate}</span>
+                                            <span className={ styles.AllSections_CategoryName }>{article.categoryName}</span>
+                                            <span className={ styles.AllSections_PublishedDate }> / {article.publishedDate}</span>
                                         </div>
                                     </div>
                                 )
@@ -74,11 +74,11 @@ const LatestStories = (props) => {
                             if(index>=food.length-1) {
                                 return(
                                     <div className={ styles.LatestStories_Card } key={index}>
-                                        <NavLink to={`/article/${article.Title}/${article.CategoryName}`} className={ styles.AllSections_Title }>{article.Title}</NavLink>
-                                        <div className={ styles.AllSections_BlogContent }>{article.BlogContent}</div>
+                                        <NavLink to={`/article/${article.title}/${article.categoryName}`} className={ styles.AllSections_Title }>{article.title}</NavLink>
+                                        <div className={ styles.AllSections_BlogContent }>{article.blogContent}</div>
                                         <div>
-                                            <span className={ styles.AllSections_CategoryName }>{article.CategoryName}</span>
-                                            <span className={ styles.AllSections_PublishedDate }> / {article.PublishedDate}</span>
+                                            <span className={ styles.AllSections_CategoryName }>{article.categoryName}</span>
+                                            <span className={ styles.AllSections_PublishedDate }> / {article.publishedDate}</span>
                                         </div>
                                     </div>
                                 )
@@ -90,11 +90,11 @@ const LatestStories = (props) => {
                             if(loadMore && index>=bollywood.length-1) {
                                 return(
                                     <div className={ styles.LatestStories_Card } key={index}>
-                                        <NavLink to={`/article/${article.Title}/${article.CategoryName}`} className={ styles.AllSections_Title }>{article.Title}</NavLink>
-                                        <div className={ styles.AllSections_BlogContent }>{article.BlogContent}</div>
+                                        <NavLink to={`/article/${article.title}/${article.categoryName}`} className={ styles.AllSections_Title }>{article.title}</NavLink>
+                                        <div className={ styles.AllSections_BlogContent }>{article.blogContent}</div>
                                         <div>
-                                            <span className={ styles.AllSections_CategoryName }>{article.CategoryName}</span>
-                                            <span className={ styles.AllSections_PublishedDate }> / {article.PublishedDate}</span>
+                                            <span className={ styles.AllSections_CategoryName }>{article.categoryName}</span>
+                                            <span className={ styles.AllSections_PublishedDate }> / {article.publishedDate}</span>
                                         </div>
                                     </div>
                                 )
@@ -106,11 +106,11 @@ const LatestStories = (props) => {
                             if(loadMore && index>=hollywood.length-1) {
                                 return(
                                     <div className={ styles.LatestStories_Card } key={index}>
-                                        <NavLink to={`/article/${article.Title}/${article.CategoryName}`} className={ styles.AllSections_Title }>{article.Title}</NavLink>
-                                        <div className={ styles.AllSections_BlogContent }>{article.BlogContent}</div>
+                                        <NavLink to={`/article/${article.title}/${article.categoryName}`} className={ styles.AllSections_Title }>{article.title}</NavLink>
+                                        <div className={ styles.AllSections_BlogContent }>{article.blogContent}</div>
                                         <div>
-                                            <span className={ styles.AllSections_CategoryName }>{article.CategoryName}</span>
-                                            <span className={ styles.AllSections_PublishedDate }> / {article.PublishedDate}</span>
+                                            <span className={ styles.AllSections_CategoryName }>{article.categoryName}</span>
+                                            <span className={ styles.AllSections_PublishedDate }> / {article.publishedDate}</span>
                                         </div>
                                     </div>
                                 )

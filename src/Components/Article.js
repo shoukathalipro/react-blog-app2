@@ -27,7 +27,7 @@ const Article = () => {
 
     useEffect(() => {
         window.scrollTo(0, 0)
-        // To Scroll Back Up While Coming To This Article Page After Clicking on an Article Title!!!
+        // To Scroll Back Up While Coming To This Article Page After Clicking on an Article title!!!
       })
 
 
@@ -35,16 +35,16 @@ const Article = () => {
         <div className={ styles.Article_Main }>
            <div className={ styles.Article_Content }>
               {
-                 blog.map(  (article, index) => article.Title === articleTitle&&
+                 blog.map(  (article, index) => article.title === articleTitle&&
                     <div key={index} className={ styles.Article_Card }>
                             <div className={ styles.Article_Card_Top }>
-                                    <div className={ styles.Article_Card_Top1 }>{article.Title}</div>
+                                    <div className={ styles.Article_Card_Top1 }>{article.title}</div>
                                     <div className={ styles.Article_Card_Top2 }>
                                             <div className={ styles.Card_Top2_Left }>
                                                     <div className={ styles.Card_Top2_Left1 }><i className="fas fa-user-circle fa-3x"></i></div>
                                                     <div className={ styles.Card_Top2_Left2 }>
                                                             <div className={ styles.Article_AuthorName }>Author Name</div>
-                                                            <div className={ styles.AllSections_PublishedDate }>{ article.PublishedDate } - 10 min read</div>
+                                                            <div className={ styles.AllSections_PublishedDate }>{ article.publishedDate } - 10 min read</div>
                                                     </div>
                                             </div>
                                             <div className={ styles.Card_Top2_Right }>
@@ -56,20 +56,20 @@ const Article = () => {
                                     </div>
                             </div>
                             <div className={ styles.Article_Card_Middle }>
-                                    <div><img className={ styles.Article_Image } src={ article.ImageAsset } alt="From the Article"/></div>
-                                    <div className={ styles.AllSections_BlogContent }>{ article.BlogContent }</div>
+                                    <div><img className={ styles.Article_Image } src={ article.imageAsset } alt="From the Article"/></div>
+                                    <div className={ styles.AllSections_BlogContent }>{ article.blogContent }</div>
                             </div>
                             <div className={ styles.Article_Card_Bottom }>
                                     <div className={ styles.Article_Card_Bottom1 }>
                                             <div><button><i className="far fa-thumbs-up fa-lg"></i></button></div>
-                                            <div>{ article.Likes } Likes</div>
+                                            <div>{ article.likes } Likes</div>
                                     </div>
                                     <div className={ styles.Article_Card_Bottom2 }>
                                             <div className={ styles.Article_Card_Bottom2A }><i className="fas fa-user-circle fa-3x"></i></div>
                                             <div className={ styles.Article_Card_Bottom2B }>
                                                     <div className={ styles.AllSections_PublishedDate }>WRITTEN BY</div>
                                                     <div className={ styles.Article_AuthorName }>Author Name</div>
-                                                    <div className={ styles.AllSections_PublishedDate }>{ article.PublishedDate } - 10 min read</div>
+                                                    <div className={ styles.AllSections_PublishedDate }>{ article.publishedDate } - 10 min read</div>
                                             </div>
                                     </div>
                             </div>
@@ -82,16 +82,16 @@ const Article = () => {
                    <div className={ styles.Related_Content_Bottom }>
                         {   // eslint-disable-next-line
                             blog.map( (article, index) => {
-                                if(article.CategoryName === articleCategory && index>=blog.length-5 && article.Title !== articleTitle) {
+                                if(article.categoryName === articleCategory && index>=blog.length-5 && article.title !== articleTitle) {
                                    return(
                                        <div key={index} className={ styles.Related_Content_Card }>
-                                          <div><img className={ styles.Related_Content_Image } src={ article.ImageAsset } alt="From The Article"/></div>
-                                          <NavLink to={`/article/${article.Title}/${article.CategoryName}`} className={ styles.AllSections_Title }>{ article.Title }</NavLink>
+                                          <div><img className={ styles.Related_Content_Image } src={ article.imageAsset } alt="From The Article"/></div>
+                                          <NavLink to={`/article/${article.title}/${article.categoryName}`} className={ styles.AllSections_Title }>{ article.title }</NavLink>
                                           <div className={ styles.Related_Content_Card_Bottom }>
                                              <div><i className="fas fa-user-circle fa-3x"></i></div>
                                              <div>
                                                 <div className={ styles.Article_AuthorName }>Author Name</div>
-                                                <div className={ styles.AllSections_PublishedDate }>{ article.PublishedDate } - 10 min read</div>
+                                                <div className={ styles.AllSections_PublishedDate }>{ article.publishedDate } - 10 min read</div>
                                              </div>
                                           </div>
                                        </div>

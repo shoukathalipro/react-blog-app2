@@ -17,15 +17,15 @@ const FeaturedArticlesComponent = (props) => {
                         bollywood.map(  (article, index) => {
                             if(index>=bollywood.length-1) {
                                 return(
-                                    <div key={index} className={styles.featured_Articles_Box_Big} style={   {backgroundImage: `url(${article.ImageAsset})`,
+                                    <div key={index} className={styles.featured_Articles_Box_Big} style={   {backgroundImage: `url(${article.imageAsset})`,
                                                                                                              backgroundPosition: 'center',
                                                                                                              backgroundSize: 'cover',
                                                                                                              backgroundRepeat: 'no-repeat' }  }>
-                                        <NavLink to={`/article/${article.Title}/${article.CategoryName}`} className={styles.Box_Big_Title}>{article.Title}</NavLink>
+                                        <NavLink to={`/article/${article.title}/${article.categoryName}`} className={styles.Box_Big_Title}>{article.title}</NavLink>
                                         <div className={styles.Box_Category_Date}>
-                                            <span>{article.CategoryName}</span>
+                                            <span>{article.categoryName}</span>
                                             <span> / </span>
-                                            <span>{article.PublishedDate}</span>
+                                            <span>{article.publishedDate}</span>
                                         </div>
                                     </div>
                                 )
@@ -40,15 +40,15 @@ const FeaturedArticlesComponent = (props) => {
                             hollywood.map(  (article, index) => {
                             if(index>=hollywood.length-1) {
                                 return(
-                                    <div key={index} className={styles.featured_Articles_Box_Small} style={   {backgroundImage: `url(${article.ImageAsset})`,
+                                    <div key={index} className={styles.featured_Articles_Box_Small} style={   {backgroundImage: `url(${article.imageAsset})`,
                                                         backgroundPosition: 'center',
                                                         backgroundSize: 'cover',
                                                         backgroundRepeat: 'no-repeat'  }  }>
-                                    <NavLink to={`/article/${article.Title}/${article.CategoryName}`} className={styles.Box_Small_Title}>{article.Title}</NavLink>
+                                    <NavLink to={`/article/${article.title}/${article.categoryName}`} className={styles.Box_Small_Title}>{article.title}</NavLink>
                                     <div className={styles.Box_Category_Date}>
-                                        <span>{article.CategoryName}</span>
+                                        <span>{article.categoryName}</span>
                                         <span> / </span>
-                                        <span>{article.PublishedDate}</span>
+                                        <span>{article.publishedDate}</span>
                                     </div>
                             </div>
                                 )
@@ -62,15 +62,15 @@ const FeaturedArticlesComponent = (props) => {
                             technology.map(  (article, index) => {
                             if(index>=technology.length-1) {
                                 return(
-                                    <div key={index} className={styles.featured_Articles_Box_Small} style={   {backgroundImage: `url(${technology[technology.length - 1].ImageAsset})`,
+                                    <div key={index} className={styles.featured_Articles_Box_Small} style={   {backgroundImage: `url(${technology[technology.length - 1].imageAsset})`,
                                                         backgroundPosition: 'center',
                                                         backgroundSize: 'cover',
                                                         backgroundRepeat: 'no-repeat' }  }>
-                                    <NavLink to={`/article/${article.Title}/${article.CategoryName}`} className={styles.Box_Small_Title}>{technology[technology.length - 1].Title}</NavLink>
+                                    <NavLink to={`/article/${article.title}/${article.categoryName}`} className={styles.Box_Small_Title}>{technology[technology.length - 1].title}</NavLink>
                                     <div className={styles.Box_Category_Date}>
-                                        <span>{technology[technology.length - 1].CategoryName}</span>
+                                        <span>{technology[technology.length - 1].categoryName}</span>
                                         <span> / </span>
-                                        <span>{technology[technology.length - 1].PublishedDate}</span>
+                                        <span>{technology[technology.length - 1].publishedDate}</span>
                                     </div>
                             </div>
                                 )

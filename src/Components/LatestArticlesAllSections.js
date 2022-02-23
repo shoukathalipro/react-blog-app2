@@ -21,14 +21,14 @@ const LatestArticlesAllSections = (props) => {
                         if(index>=technology.length-1) {
                             return(
                                 <div key={index} className={styles.AllSections_Card}>
-                                    <div><img className={styles.AllSections_Image} src={  article.ImageAsset  } alt="From The Article"/></div>
+                                    <div><img className={styles.AllSections_Image} src={  article.imageAsset  } alt="From The Article"/></div>
                                     <div>
-                                        <NavLink to={`/article/${article.Title}/${article.CategoryName}`} className={styles.AllSections_Title}>{  article.Title  }</NavLink>
-                                        <div className={styles.AllSections_BlogContent}>{  article.BlogContent  }</div>
+                                        <NavLink to={`/article/${article.title}/${article.categoryName}`} className={styles.AllSections_Title}>{  article.title  }</NavLink>
+                                        <div className={styles.AllSections_BlogContent}>{  article.blogContent  }</div>
                                     </div>
                                     <div>
-                                        <span className={styles.AllSections_CategoryName}>{ article.CategoryName  }</span>
-                                        <span className={styles.AllSections_PublishedDate}> / { article.PublishedDate  }</span>
+                                        <span className={styles.AllSections_CategoryName}>{ article.categoryName  }</span>
+                                        <span className={styles.AllSections_PublishedDate}> / { article.publishedDate  }</span>
                                     </div>
                                 </div> 
                             )
@@ -41,14 +41,14 @@ const LatestArticlesAllSections = (props) => {
                         if(index>=fitness.length-1) {
                             return(
                                 <div key={index} className={styles.AllSections_Card}>
-                                    <div><img className={styles.AllSections_Image} src={  article.ImageAsset  } alt="From The Article"/></div>
+                                    <div><img className={styles.AllSections_Image} src={  article.imageAsset  } alt="From The Article"/></div>
                                     <div>
-                                        <NavLink to={`/article/${article.Title}/${article.CategoryName}`} className={styles.AllSections_Title}>{  article.Title  }</NavLink>
-                                        <div className={styles.AllSections_BlogContent}>{  article.BlogContent  }</div>
+                                        <NavLink to={`/article/${article.title}/${article.categoryName}`} className={styles.AllSections_Title}>{  article.title  }</NavLink>
+                                        <div className={styles.AllSections_BlogContent}>{  article.blogContent  }</div>
                                     </div>
                                     <div>
-                                        <span className={styles.AllSections_CategoryName}>{ article.CategoryName  }</span>
-                                        <span className={styles.AllSections_PublishedDate}> / { article.PublishedDate  }</span>
+                                        <span className={styles.AllSections_CategoryName}>{ article.categoryName  }</span>
+                                        <span className={styles.AllSections_PublishedDate}> / { article.publishedDate  }</span>
                                     </div>
                                 </div>
                             )
@@ -61,14 +61,14 @@ const LatestArticlesAllSections = (props) => {
                         if(index>=food.length-1) {
                             return(
                                 <div key={index} className={styles.AllSections_Card}>
-                                    <div><img className={styles.AllSections_Image} src={  article.ImageAsset  } alt="From The Article"/></div>
+                                    <div><img className={styles.AllSections_Image} src={  article.imageAsset  } alt="From The Article"/></div>
                                     <div>
-                                        <NavLink to={`/article/${article.Title}/${article.CategoryName}`} className={styles.AllSections_Title}>{  article.Title  }</NavLink>
-                                        <div className={styles.AllSections_BlogContent}>{  article.BlogContent  }</div>
+                                        <NavLink to={`/article/${article.title}/${article.categoryName}`} className={styles.AllSections_Title}>{  article.title  }</NavLink>
+                                        <div className={styles.AllSections_BlogContent}>{  article.blogContent  }</div>
                                     </div>
                                     <div>
-                                        <span className={styles.AllSections_CategoryName}>{ article.CategoryName  }</span>
-                                        <span className={styles.AllSections_PublishedDate}> / { article.PublishedDate  }</span>
+                                        <span className={styles.AllSections_CategoryName}>{ article.categoryName  }</span>
+                                        <span className={styles.AllSections_PublishedDate}> / { article.publishedDate  }</span>
                                     </div>
                                 </div>
                             )
